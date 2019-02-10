@@ -92,22 +92,453 @@ a{
 	height: 19px;
 	background-position: -102px -0px; 	
 }
+.icon-mail-newsletter{
+	width: 17px;
+	height: 12px;
+	background-position: -122px 0px;
+}
 
 // Buttons
 .button1{
-	color: #fff;
-	border: 1px solid #fff;
-	width: 54px;
+	background: $corPrim02;
 	text-align: center;
-	height: 30px;
-	padding-top: 8px;
+	padding: 70px 16px 32px;
+	width: 300px;
+	height: 155px;
+
+	h3{
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 30px;
+		margin-bottom: 12px;
+	}
+	p{
+		color: #fff;
+	}
+
+	&:hover{
+		opacity: 1 !important;
+	}
+
+	@media(min-width: 1200px){
+		width: 360px;
+	}
 }
+.button2{
+	@extend .button1;
 
+	background: $corPrim01;
+}
+.button3{
+	width: 185px;
+	height: 42px;
+	background: $corPrim02;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+	display: block;
+	text-align: center;
+	padding-top: 12px;
+	letter-spacing: 2px;
 
+	&:hover{
+		opacity: 0.7;
+	}
+}
+.button4{
+	@extend .button3;
+	background: $corPrim01;
+}
 
 /*************
 1- 								Padrões
 /**************/
 
+// Padrão de títulos
+.title-pad{
+	position: relative;
+	text-align: center;
+
+	span{
+		text-transform: uppercase;
+		font-size: 16px;
+		margin-bottom: 16px;
+		color: $corSec01;
+		display: block;
+	}
+
+	h2{
+		text-transform: uppercase;
+		color: $corSec01;
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	&::after{
+		content: '';
+		display: block;
+		width: 90px;
+		height: 2px;
+		background: $corPrim02;
+		margin-top: 16px;
+		position: absolute;
+		left: 50%;
+		margin-left: -45px;
+	}
+}
+
+//Ícones das Redes Sociais
+.social-media{
+  li{
+    margin-left: 26px;
+    transition: all 200ms ease;
+
+    &:hover{
+      opacity: 0.5;
+    }
+
+    &:first-child{
+      margin-left: 0px;
+    }
+  }
+}
 
 
+.form-pad{
+	input{
+		outline: none;
+		border: none;
+	}
+	input, a, textarea, select{
+		height: 44px;
+		border: 2px solid #eeeeee;
+		margin-bottom: 14px;
+		width: 100%;
+		padding: 0px 16px;
+		font-size: 16px;
+		color: #777;
+	}
+
+	textarea{
+		height: 170px;
+		font-size: 16px;
+		padding-top: 8px;
+	}
+
+	a{
+		text-align: center;
+		background: $corPrim01;
+		color: #fff;
+		border: none;
+		padding-top: 15px;
+		font-family: $bold;
+		max-width: 180px !important;
+		margin-bottom: 0px;
+
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+
+	.enviar-hidden{
+		overflow: hidden;
+		position: absolute;
+		left: 0px;
+		visibility: hidden;
+	}
+
+	.erro-form{
+		width: 100%;
+		display: none;
+
+		p{
+			color: red;
+			text-align: center;
+		}
+	}
+
+	.input-error{
+		border: 2px solid red !important;
+	}
+
+	img{
+		opacity: 0;
+		display: none;
+		margin-top: 8px;
+	}
+
+	@media(min-width: 992px){
+		input, textarea{
+			max-width: 390px;
+		}
+	}
+}
+
+.form-email{
+	padding: 20px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+
+	header{
+		background: $corPrim01;
+		padding: 28px;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+		width: 100%;
+		height: 70px;	
+		margin: 0px auto 16px;
+	}
+
+	textarea{
+		height: 90px;
+	}
+
+	@media(min-width: 992px){
+		max-width: 305px;
+
+		header{
+			max-width: 270px;
+		}
+	}
+}
+
+.categorias-pad{
+	li{
+		margin-bottom: 48px;
+		text-align: center;
+		transition: all 200ms ease;
+
+		&:last-child{
+			margin-bottom: 0px;
+		}
+
+		&:hover{
+			opacity: 0.7;
+		}
+
+		.wrap{
+			margin-bottom: 10px;
+		}
+
+		p{
+			font-weight: bold;
+			color: $corSec01;
+		}
+	}
+
+
+	@media(min-width: 768px){
+		li{
+			margin-bottom: 0px;
+			margin-left: 120px;
+
+			&:first-child{
+				margin-left: 0px;
+			}
+
+			p{
+				font-size: 14px;
+				line-height: 19px;
+			}
+		}
+		// li:nth-child(3){
+		// 	position: relative;
+		// 	left: -18px;
+		// }
+		// li:nth-child(4){
+		// 	position: relative;
+		// 	left: -66px;
+		// }
+	}
+	@media(min-width: 999px){
+		li{
+			margin-left: 32px;
+		}
+	}
+	@media(min-width: 1200px){
+		li{
+			margin-left: 90px;
+			max-width: 105px;
+		}
+	}
+}
+
+.aulas-individuais{
+	max-width: 540px;
+	margin: 0 auto;
+
+	img{
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	h3{
+		font-size: 22px;
+		color: $corSec01;
+		margin-bottom: 32px;
+		text-transform: uppercase;
+		font-weight: bold;
+
+
+		&:after{
+			content: '';
+			display: block;
+			width: 90px;
+			height: 2px;
+			background: $corPrim02;
+			margin-top: 16px;
+		}
+	}
+
+	.sub{
+		font-size: 18px;
+		text-transform: uppercase;
+		color: $corSec01;
+		font-weight: bold;
+		line-height: 23px;
+		margin-bottom: 24px;
+		display: block;
+	}
+
+	p{
+		font-size: 18px;
+		line-height: 23px;
+		color: $corSec01;
+		margin-bottom: 32px;
+
+		span{
+			color: $corPrim02;
+		}
+	}
+
+	@media(min-width: 992px){
+		max-width: 1075px;
+
+		.wrap{
+			width: 440px;
+			margin-right: 30px;
+		}
+		.content{
+			width: 404px;
+			padding-top: 13px;
+		}
+	}
+	@media(min-width: 1200px){
+		.wrap{
+			width: 540px;
+			margin-right: 30px;
+		}
+		.content{
+			width: 504px;
+			padding-top: 13px;
+
+			h3{
+				font-size: 30px;
+				margin-top: 24px;
+			}
+			.sub{
+				font-size: 22px;
+				margin-bottom: 50px;
+			}
+			p{
+				font-size: 22px;
+			}
+		}		
+	}
+}
+
+.post-pad-01{
+	margin: 0px auto 64px;
+	max-width: 375px;
+	transition: all 200ms ease;
+
+	&:hover{
+		opacity: 0.7;
+	}
+
+	.image{
+		background: url('../img/post-blog-01.jpg') no-repeat center center;
+		width: 187px;
+		height: 139px;
+		margin: 0 auto;
+		margin-bottom: 28px;
+	}
+
+	h3{
+		font-size: 18px;
+		line-height: 23px;
+		color: $corSec01;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	p{
+		color: $corSec01;
+		font-size: 16px;
+		line-height: 21px;
+	}
+
+	@media(min-width: 768px){
+		max-width: 550px;
+
+		.content{
+			max-width: 332px;
+		}
+		.image{
+			margin-bottom: 0px;
+		}
+	}
+	@media(min-width: 992px){
+		.image{
+			margin-right: 28px;
+		}
+		h3{
+			font-size: 20px;
+			line-height: 24px;
+		}
+		p{
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+}
+
+.form-newsletter{
+  position: relative;
+  max-width: 290px; 
+  margin: 0 auto;
+
+  input{
+    width: 240px;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 4px;
+  }
+  .load{
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  .btn-enviar{
+    position: absolute;
+    right: 32px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    background: $corPrim02;
+    padding-left: 12px;
+    border-radius: 50%;
+
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  .erro-form{
+    p{
+      color: $corPrim02;
+    }
+  }
+}

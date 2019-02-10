@@ -2,201 +2,61 @@
 @import '_reset.scss';
 @import '_font.scss';
 @import '_global.scss';
+@import '_header.scss';
+@import '_home.scss';
+@import '_footer.scss';
 
-.header-site{
-  position: relative;
-  padding: 16px 0px;
-  overflow: hidden;
+.banner-slideshow{
+  img{
+    width: 100%;
+  }
+}
 
-  .logo{
+.cabecalho{
+  .banner-interno{
+    width: 100%;
+    height: 215px;
+    background: url('../img/banner-interno.png') no-repeat center center;
     position: relative;
-    z-index: 1000;
+    margin-bottom: 50px;
 
-    &:hover{
-      opacity: 0.7;
+    h1{
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: -20px;
     }
   }
-  
-  .icon-mob-js{
-    position: relative;
-    right: 10px;
-    top: 5px;
-    z-index: 1000;
-    cursor: pointer;
-  }
-  .active-menu{
-    left: 0px !important;
-    opacity: 1 !important;
-  }
-
-  .menu-site{
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    left: 100%;
-    transition: all 400ms ease;
-    background: $corPrim01;
-    padding-top: 116px;
-    padding-bottom: 32px;
+  .breadcrumb{
+    padding-bottom: 22px;
+    border-bottom: 1px solid #d1d1d1;
+    margin-bottom: 52px;
     width: 100%;
 
-    .menu{
-      margin-bottom: 32px;
-
-      li{
-        width: 100%;
-        color: #fff;
-        text-align: center;
-      }
-      a{
-        padding: 12px 0px;
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        display: block;
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-      }
-    }
-
-    .extra-menu{
-      li{
-        margin-bottom: 16px;
-        text-align: left;
-        color: #fff;
-
-        i{
-          margin-right: 8px;
-        }
-      }
-
-      .social-media{
-        margin-top: 32px;
-        margin-bottom: 0px;
-
-        li{
-          margin-bottom: 0px;
-        }
-        i{
-          margin-right: 0px;
-        }
-      }
+    li{
+      margin-right: 10px;
+      color: $corSec01;
 
       a{
-        border-bottom: none;
-        text-align: left;
-        color: #fff;
-      }
-    }
-
-    .horario{
-      font-size: 14px;
-    }
-  }
-
-  @media(min-width: 992px){
-    overflow: visible;
-    p, span{
-      color: $corPrim01;
-    }
-    .header1{
-      margin-bottom: 26px;
-
-      .wrap{
-        margin-right: 5px;
-      }
-
-      .email{
-        margin-right: 16px;
-      }
-      .tell{
-        margin-right: 40px;
-      }
-    }
-
-    .logo{
-      margin-right: 48px;
-    }
-
-    .menu-site{
-      position: static;
-      opacity: 1;
-      padding-top: 0px;
-      background: #fff;
-      padding-bottom: 0px;
-
-      .menu{
-        margin-bottom: 0px;
-        position: relative;
-        top: 8px;
-      }
-
-      li{
-        width: auto !important;
-        margin-left: 32px;
-        position: relative;
-
-        a{
-          color: $corSec01 !important;
-          font-size: 12px;
-          font-weight: bold;
-          border-bottom: none;
-          padding: 24px 0px !important;
-  
-          &:hover{
-            opacity: 0.7;
-          }
-        }
-
-        &:first-child{
-          margin-left: 0px;
-        }
+        color: $corSec01;
 
         &:hover{
-          ul{
-            opacity: 1;
-          }
+          opacity: 0.7;
         }
 
-        ul{
-          position: absolute;
-          left: 50%;
-          top: 54px;
-          background: $corPrim02;
-          width: 160px;
-          margin-left: -80px;
-          opacity: 0;
-          transition: all 300ms ease;
-
-          li{
-            margin-left: 0px;
-
-            a{
-              color: #fff !important;
-              padding: 12px 0px !important;
-              border-bottom: 1px solid rgba(255,255,255, 0.5);
-              text-align: left !important;
-              padding-left: 16px !important;
-            }            
-          }
+        span{
+          color: $corPrim02;
         }
       }
     }
   }
 }
 
-.social-media{
-  li{
-    margin-left: 26px;
-    transition: all 200ms ease;
+.itens-espec-pad{
 
-    &:hover{
-      opacity: 0.5;
-    }
-
-    &:first-child{
-      margin-left: 0px;
-    }
-  }
 }
